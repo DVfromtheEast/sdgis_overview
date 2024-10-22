@@ -36,12 +36,12 @@ body {
   border-radius: 1rem;
 }
 .m1 {
-  right: 140px;
-  top: 232px;
+  right: 19%;
+  top: 53%;
 }
 .m2 {
-  right: 200px;
-  top: 200px;
+  right: 28%;
+  top: 48%;
 }
 
 .marker:hover {
