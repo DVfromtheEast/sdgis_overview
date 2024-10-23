@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import Sdwebgis from './components/sdwebgis.jsx';
 import Map from './components/map.jsx';
+import ModalComponent from './components/modal.jsx';
 import './App.css';
 
 function App() {
@@ -13,9 +14,9 @@ function App() {
         <Sdwebgis />
       </div>
       <div className="map">
-        <div className="marker m1"></div>
-        <div className="marker m2"></div>
         <Map />
+        <ModalComponent className="m1" />
+        <ModalComponent className="m2" />
       </div>
       <div className="credit">
         <p className="link">
