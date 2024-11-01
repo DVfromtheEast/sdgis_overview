@@ -1,15 +1,34 @@
 /* Modal Content */
+.marker {
+  width: 1rem;
+  height: 1rem;
+  background-color: #e81e25;
+  z-index: 100;
+  border-radius: 1rem;
+}
+.modal-container {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1.25rem;
+  padding: 0;
+  width: 22.5rem;
+  max-width: 22.5rem;
+  height: 32rem;
+  display: flex;
+  flex-direction: column;
+  top: auto;
+  justify-content: flex-start;
+}
 .cover {
   width: 100%;
   height: 8rem;
   background-color: #aaaaaa;
+  position: relative;
 }
-.marker {
-  width: 1.25rem;
-  height: 1.25rem;
-  background-color: #e81e25;
-  z-index: 100;
-  border-radius: 1rem;
+.cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .modal-content {
   background-color: #0d1117;
@@ -28,7 +47,9 @@
 /* The Close Button */
 .close {
   color: #aaaaaa;
-  float: right;
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
   font-size: 28px;
   font-weight: bold;
 }
@@ -38,4 +59,8 @@
   color: #000;
   text-decoration: none;
   cursor: pointer;
+}
+a {
+  width: 100%;
+  text-align: right;
 }

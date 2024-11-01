@@ -2,7 +2,8 @@ import * as React from 'react';
 import { useState } from 'react';
 import Sdwebgis from './components/sdwebgis.jsx';
 import Map from './components/map.jsx';
-import ModalComponent from './components/modal.jsx';
+import ModalCruiv from './components/modalCRUIV.jsx';
+import ModalDibrugarh from './components/modalDibrugarh.jsx';
 import './App.css';
 
 function App() {
@@ -15,8 +16,8 @@ function App() {
       </div>
       <div className="map">
         <Map />
-        <ModalComponent className="m1" />
-        <ModalComponent className="m2" />
+        <ModalCruiv className="cruiv" />
+        <ModalDibrugarh className="dibrugarh" />
       </div>
       <div className="credit">
         <p className="link">

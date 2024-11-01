@@ -36,15 +36,15 @@ body {
   position: relative;
 }
 
-.m1 {
+.cruiv {
   position: absolute;
-  right: 19%;
+  right: 19.5%;
   top: 53%;
 }
-.m2 {
+.dibrugarh {
   position: absolute;
-  right: 28%;
-  top: 48%;
+  right: 28.75%;
+  top: 46.5%;
 }
 
 .marker:hover {
