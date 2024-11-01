@@ -17,20 +17,25 @@ const customStyles = {
   },
 };
 
-export default function ModalCruiv(props) {
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+export default function ModalCruiv({
+  id,
+  selectedModal,
+  setSelectedModal,
+  className,
+}) {
+  const modalIsOpen = selectedModal === id;
 
   function openModal() {
-    setIsOpen(true);
+    setSelectedModal(id);
   }
 
   function closeModal() {
-    setIsOpen(false);
+    setSelectedModal(null);
   }
 
   return (
     <div>
-      <div onClick={openModal} className={'marker ' + props.className}></div>
+      <div onClick={openModal} className={'marker ' + className}></div>
       {/* The Modal  */}
       <Modal
         isOpen={modalIsOpen}
@@ -38,9 +43,12 @@ export default function ModalCruiv(props) {
         overlayClassName="Overlay"
       >
         {/* Modal content */}
-        <div className="modal-container">
+        <div className={`modal-container ${modalIsOpen ? 'open' : 'close'}`}>
           <div className="cover">
-            <span className="close" onClick={closeModal}>
+            <span
+              className="close material-symbols-rounded"
+              onClick={closeModal}
+            >
               close
             </span>
             <img
@@ -55,7 +63,15 @@ export default function ModalCruiv(props) {
               <strong>Location</strong>
               <p>Ninh Binh – Thanh Hoa – Nghe An – Ha Tinh</p>
             </div>
-            <a href="">View project</a>
+
+            <a
+              href="https://gis.spatialdecisions.com/cruiv/login"
+              target="_blank"
+            >
+              {' '}
+              <span className="material-symbols-rounded">arrow_outward</span>
+              View project
+            </a>
           </div>
         </div>
       </Modal>

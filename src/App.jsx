@@ -8,6 +8,7 @@ import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
+  const [selectedModal, setSelectedModal] = useState(null);
 
   return (
     <>
@@ -16,8 +17,18 @@ function App() {
       </div>
       <div className="map">
         <Map />
-        <ModalCruiv className="cruiv" />
-        <ModalDibrugarh className="dibrugarh" />
+        <ModalCruiv
+          className="cruiv"
+          id="cruiv"
+          selectedModal={selectedModal}
+          setSelectedModal={setSelectedModal}
+        />
+        <ModalDibrugarh
+          className="dibrugarh"
+          id="dibrugarh"
+          selectedModal={selectedModal}
+          setSelectedModal={setSelectedModal}
+        />
       </div>
       <div className="credit">
         <p className="link">

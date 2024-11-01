@@ -18,6 +18,7 @@
   flex-direction: column;
   top: auto;
   justify-content: flex-start;
+  filter: drop-shadow(0px 8px 25px rgba(0, 0, 0, 0.15));
 }
 .cover {
   width: 100%;
@@ -46,21 +47,28 @@
 }
 /* The Close Button */
 .close {
-  color: #aaaaaa;
+  color: #ffffff;
+  background-color: #0000004c;
   position: absolute;
   right: 0.75rem;
   top: 0.75rem;
-  font-size: 28px;
-  font-weight: bold;
+  font-size: 1.75rem;
+  padding: 0.25rem;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
   text-decoration: none;
   cursor: pointer;
+  transform: scale(0.95);
 }
-a {
-  width: 100%;
+.modal-content a {
   text-align: right;
+  text-transform: uppercase;
+  color: #e81e25;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: 0.5rem;
 }

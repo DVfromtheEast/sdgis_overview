@@ -43,7 +43,7 @@ body {
 }
 .dibrugarh {
   position: absolute;
-  right: 28.75%;
+  right: 25.2%;
   top: 46.5%;
 }
 
@@ -68,4 +68,43 @@ body {
 }
 .link a {
   color: #0d1117;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(-20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Modal overlay animations */
+.Overlay.open {
+  animation: fadeInSlide 0.5s ease forwards;
+}
+
+.Overlay.close {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+/* Modal content animations */
+.modal-container.open {
+  animation: fadeInSlide 0.5s ease forwards;
+}
+
+.modal-container.close {
+  animation: fadeOut 0.5s ease forwards;
 }

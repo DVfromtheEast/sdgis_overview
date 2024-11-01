@@ -17,20 +17,25 @@ const customStyles = {
   },
 };
 
-export default function ModalDibrugarh(props) {
-  const [modalIsOpen, setIsOpen] = React.useState(false);
+export default function ModalDibrugarh({
+  id,
+  selectedModal,
+  setSelectedModal,
+  className,
+}) {
+  const modalIsOpen = selectedModal === id;
 
   function openModal() {
-    setIsOpen(true);
+    setSelectedModal(id);
   }
 
   function closeModal() {
-    setIsOpen(false);
+    setSelectedModal(null);
   }
 
   return (
     <div>
-      <div onClick={openModal} className={'marker ' + props.className}></div>
+      <div onClick={openModal} className={'marker ' + className}></div>
       {/* The Modal  */}
       <Modal
         isOpen={modalIsOpen}
@@ -38,9 +43,12 @@ export default function ModalDibrugarh(props) {
         overlayClassName="Overlay"
       >
         {/* Modal content */}
-        <div className="modal-container">
+        <div className={`modal-container ${modalIsOpen ? 'open' : 'close'}`}>
           <div className="cover">
-            <span className="close" onClick={closeModal}>
+            <span
+              className="close material-symbols-rounded"
+              onClick={closeModal}
+            >
               close
             </span>
             <img
@@ -55,7 +63,14 @@ export default function ModalDibrugarh(props) {
               <strong>Client</strong>
               <p>Assam Climate Change Management Society (ACCMS)</p>
             </div>
-            <a href="">View project</a>
+            <a
+              href="https://gis.spatialdecisions.com/dibrugarh/"
+              target="_blank"
+            >
+              {' '}
+              <span className="material-symbols-rounded">arrow_outward</span>
+              View project
+            </a>
           </div>
         </div>
       </Modal>
